@@ -1,0 +1,27 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    margin-left: 90px;
+}
+.product img {
+    width: 250px;    /* Sets the width */
+    height: 250px;   /* Sets the height */
+    object-fit: cover; /* Crops the image perfectly */
+    border-radius: 5px; /* Optional: Makes corners slightly round */
+    margin-right: 20px; /* Space between image and details */
+}
+.product-name{
+    color: rgb(69, 69, 255);
+    font-weight: 500; /* 400 is 'normal' text. Default bold is 700. */
+}
+.main-button{
+    background-color: rgb(255, 153, 0);
+    border: none;
+    padding: 10px 40px;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
