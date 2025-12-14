@@ -1,4 +1,4 @@
-.shop-container{
+.twin-container{
     display: flex;
 }
 .product-container{
@@ -6,4 +6,25 @@
     margin-left: 20px;
     margin-right: 5px;
     border-right: 1px solid lightgray;
+}
+/* ... keep your existing code above ... */
+
+/* This triggers only on screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .twin-container {
+        flex-direction: column; /* Stack them vertically */
+    }
+
+    .product-container {
+        width: 100%; /* Use full width */
+        margin-left: 0;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 1px solid lightgray; /* Add separation line at bottom instead */
+    }
+
+    .cart-container {
+        width: 100%; /* Use full width for cart too */
+        text-align: center; /* Center align the cart text */
+    }
 }
