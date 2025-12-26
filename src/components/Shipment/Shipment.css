@@ -1,0 +1,47 @@
+.ship-form {
+    width: 400px;
+    margin: 20px auto; /* Centers the form */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.ship-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    font-size: 16px;
+}
+
+.ship-form input:focus {
+    outline: none;
+    border-color: orange; /* Highlight color when typing */
+}
+
+/* Style the Submit Button */
+.ship-form input[type="submit"] {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ship-form input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+/* Error Message Style */
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+}

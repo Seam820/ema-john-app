@@ -3,14 +3,15 @@ import { getStoredCart, deleteFromDb, clearTheCart } from '../../utilities/faked
 import fakeData from '../../fakeData/products.json';
 import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif'
+import { useNavigate } from 'react-router-dom';
 
 const Review = () => {
     const [cart, setCart] = useState([]);    
     const [orderPlaced, setOrderPlaced] = useState(false);
-    const handlePlaceProduct = () => {
-        setCart([]);
-        setOrderPlaced(true);
-        clearTheCart();
+    const history = useNavigate();
+
+    const handleProceedCheckout = () => {
+        history('/shipment');
     }
     useEffect(()=>{
       const savedCart = getStoredCart();
@@ -67,7 +68,7 @@ const Review = () => {
             
             <div className="cart-container">
                <Cart cart={cart}>
-                <button onClick={handlePlaceProduct} className='main-button'>Place Order</button>
+                <button onClick={handleProceedCheckout} className='main-button'>Place Order</button>
                </Cart>
             </div>
         </div>
