@@ -12,7 +12,11 @@ const Header = () => {
                 <Link to="/shop">Shop</Link>
                 <Link to="/review">Order Review</Link>
                 <Link to="/manage">Manage Inventory</Link>
-                <button onClick={()=> setLoggedInUser({})}>Sign Out</button>
+                {
+                    loggedInUser.email 
+                    ? <button onClick={() => setLoggedInUser({})}>Sign Out</button>
+                    : <Link to="/login">Sign In</Link>
+                }
             </nav>
         </div>
     );
